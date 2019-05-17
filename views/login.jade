@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    title= "Inventory Apps"
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel="stylesheet", href='/stylesheets/bs/bootstrap.min.css')
+  body
+    .container-fluid
+        .row
+            .col-md-4.mx-auto.mt-4
+                .card
+                    .card-header.alert-primary
+                        text="Login"
+                    .card-body
+                        p.alert-danger= message
+                        form(action="/auth", method="post").form
+                            .form-group
+                                label(for="nip")="NIP"
+                                input(type="text", name="nip",required).form-control
+                            .form-group
+                                label(for="nip")="Password"
+                                input(type="password", name="password",required).form-control
+                            input(type="submit", value="Login").btn.btn-primary
+

@@ -1,0 +1,36 @@
+extends layout
+
+block content
+    include userdetail
+    if isAdmin
+        .container-fluid
+            if resUpload
+                .row
+                    .col-md-6
+                        .alert(class= "alert-"+resAlert)
+                            text= resMsg
+            .row
+                .col-md-6
+                    .card
+                        .card-header
+                            text="Select XLSX File"
+                        .card-body
+                            form(action="/uploader/post",method="post",enctype="multipart/form-data").form-horizontal
+                                .form-group
+                                    label(for="exceldata")="Upload"
+                                    input(type="file", name="exceldata", accept='.xlsx').form-control
+                                .form-group
+                                    label(for="submit")
+                                    input(type="submit", value="Upload").btn.btn-primary.btn-sm
+                                .form-group
+                                    label(for="exceldata")="Template Form Excel (2010)"
+                                    .form-control
+                                        a(href="/dataUploader/template.xlsx", target="_blank")="Download"
+                                .form-group
+                                    label(for="exceldata")="List Penamaan Divisi"
+                                    .form-control
+                                        a(href="/dataUploader/divisiName.xlsx", target="_blank")="Daftar Nama Divisi"
+    else
+        .container
+            h2="You Are Not Authorized to Access this menu."
+            a(href="/")="<< Go Back"

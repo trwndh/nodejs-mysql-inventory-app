@@ -1,0 +1,59 @@
+extend ../layout
+
+block content
+    include ../userdetail
+    if resInsert
+        .container-fluid
+                .row
+                    .col-md-6
+                        .alert(class="alert-"+resAlert)
+                            text.pull-right= resMsg
+                            a(href="/inventory/list")=" | << Kembali ke daftar inventory"
+    if isAdmin
+        .container-fluid
+            .row
+                .col-md-6
+                    .card
+                        .card-header
+                            text="Add New Inventory"
+                        .card-body
+                            form(action="/inventory/edit/"+id,method="post",enctype="multipart/form-data")
+                                .row
+                                    .col-md-6
+                                        .form-group
+                                            label(for="")="Jenis Barang"
+                                            select(name="jenisBarang",required).form-control.form-control-sm
+                                                option(value="Hardware",selected=itemDetail.jenisBarang=="Hardware")="Hardware"
+                                                option(value="Software",selected=itemDetail.jenisBarang=="Software")="Software" 
+                                        .form-group
+                                            label(for="")="Nama Barang"
+                                            input(type="text",autocomplete="off",name="namaBarang",required, value= "#{itemDetail.namaBarang}").form-control.form-control-sm
+                                        .form-group
+                                            label(for="")="Kode Barang"
+                                            input(type="text",autocomplete="off", name="kodeBarang",required, value= "#{itemDetail.kodeBarang}").form-control.form-control-sm
+                                    
+                                        .form-group
+                                            label(for="")="Keterangan"
+                                            textarea(name="keterangan").form-control=itemDetail.keterangan
+                                        .form-group
+                                            label(for="")="Serial"
+                                            textarea(name="serial").form-control=itemDetail.serial
+                                    .col-md-6
+                                        .form-group
+                                            label(for="")="Divisi"
+                                            select(name="divisi", class="form-control form-control-sm")
+                                                each divs in divisi
+                                                    option(value=""+divs.Divisi,selected=itemDetail.divisi==divs.Divisi)= divs.Divisi
+                                        .form-group
+                                            label(for="")="Masa Berlaku"
+                                            input(type="date", name="masaBerlaku", value= "#{itemDetail.masaBerlaku}").form-control.form-control-sm
+                                        .form-group
+                                            label(for="")="File Invoice (pdf) "
+                                            if itemDetail.pathFile
+                                                a(href=itemDetail.pathFile)="| Existing"
+                                            input(type="file",accept=".pdf",name="pathFile").form-control
+                                        input(type="submit",value="Submit Data").btn.btn-primary
+    else
+        .container
+            h2="You Are Not Authorized to Access this menu."
+            a(href="/")="<< Go Back"

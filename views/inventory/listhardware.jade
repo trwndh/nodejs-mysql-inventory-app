@@ -1,0 +1,75 @@
+extend ../layout
+
+block content
+    include ../userdetail
+    
+    .container-fluid
+        .row
+            .col-md-12
+                .card
+                    .card-header
+                        text="List Inventory Hardware | "+divisi
+                        a(href="/inventory/add").btn.btn-sm.btn-success=" + "
+                    .card-body
+                        table.table.table-hover.display.compact#tblListInventory
+                            thead
+                                tr
+                                    th
+                                        text="No"
+                                    th
+                                        text="Divisi"
+                                    th
+                                        text="Jenis"
+                                    th
+                                        text="Kode Barang"
+                                    th
+                                        text="Nama Barang"
+                                    th
+                                        text="Masa Berlaku"
+                                    th
+                                        text="Keterangan"
+                                    th
+                                        text="Invoice"
+                                    if isAdmin
+                                        th
+                                            text=" "
+                            tbody
+                                - var i = 0
+                                each list in data
+                                    tr
+                                        td
+                                            text=i+=1
+                                        td
+                                            text=list.divisi
+                                        td
+                                            text=list.jenisBarang
+                                        td
+                                            text=list.kodeBarang
+                                        td
+                                            text=list.namaBarang
+                                        td
+                                            text=list.msbrlk
+                                        td
+                                            text=list.keterangan
+                                        td
+                                            if list.pathFile
+                                                a(href=list.pathFile,target="_blank")="Download"
+                                        if isAdmin
+                                            td
+                                                a(href="/inventory/edit/"+list.id)="Edit | "
+                                                a(href="/inventory/delete/"+list.id)="Delete"
+
+    script.
+        $(document).ready( function () {
+            $('#tblListInventory').DataTable({
+                dom: 'Blfrtip',
+                buttons: [
+                    {
+                        extend: 'pdfHtml5',
+                        exportOptions: {
+                            columns: [ 0, 1, 2, 3,4,5,6 ]
+                        }
+                    }
+                ]
+            });
+        } );

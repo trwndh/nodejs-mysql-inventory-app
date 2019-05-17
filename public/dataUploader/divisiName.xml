@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>Mas Tri</Author>
+  <LastAuthor>Mas Tri</LastAuthor>
+  <Created>2018-10-22T09:23:16Z</Created>
+  <Version>14.00</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>10005</WindowHeight>
+  <WindowWidth>10005</WindowWidth>
+  <WindowTopX>120</WindowTopX>
+  <WindowTopY>135</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Arial" x:Family="Swiss"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s62">
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Color="#0000FF" ss:Bold="1"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Sheet1">
+  <Table ss:ExpandedColumnCount="1" ss:ExpandedRowCount="30" x:FullColumns="1"
+   x:FullRows="1">
+   <Column ss:AutoFitWidth="0" ss:Width="241.5"/>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">nama_divisi</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">IT</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Manajemen Konstruksi</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Struktur</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Infrastruktur</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Ketenagaan</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Soil</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Survey &amp; Pemetaan</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Instrumentasi</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Arsitektur</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Sumber Daya Air</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Umum</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Geoteknik</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Manajemen Mutu</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Keuangan</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Sekretaris Perusahaan</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SBU-1</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SBU-3</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Board of Directors</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Direktorat Keuangan</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Akuntansi</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SBU-2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SBU-5</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SBU-4</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Teknologi Informasi</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Audit Internal</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Strategy Management Office</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Human Capital</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">WCI</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">WCM</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>8</ActiveRow>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

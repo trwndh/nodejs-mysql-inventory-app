@@ -1,0 +1,23 @@
+extends ../layout
+
+block content
+    include ../userdetail
+   
+    if isAdmin
+        .container-fluid
+            .row
+                .col-md-5.mx-auto
+                    .card
+                        if isDeleted
+                            .alert(class="alert-"+resAlert)
+                                text=resMsg
+                                a(href="/inventory/list")=" << Kembali ke daftar inventory"
+                        else
+                            .card-header
+                                text="Hapus item ini?"
+                            .card-body
+                                a(href="/inventory/delete/"+id+'/confirm').btn.btn-danger="Ya"
+                                text=" "
+                                a(href="/inventory/list").btn.btn-primary="Tidak"
+
+                    

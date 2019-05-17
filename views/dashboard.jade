@@ -1,0 +1,29 @@
+extends layout
+
+block content
+    include userdetail
+    .container-fluid
+        .row
+            .col-md-3
+                .card
+                    .card-header
+                        p="Inventory Summary"
+                    .card-body
+                        p="Total Software : 0000"
+                        p="Total Hardware : 0000"
+            .col-md-6
+                .card
+                    .card-header
+                        p="List Request"
+                    .card-body
+                        table.table
+                            thead
+                                tr
+                                    th
+                                        text="No"
+                                    th
+                                        text="Requested Type"
+                                    th
+                                        text="Requested By"
+                                    th
+                                        text="Request Date"
